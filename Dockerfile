@@ -28,4 +28,6 @@ COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 8080
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+COPY docker/start.sh /start.sh
+RUN chmod +x /start.sh
+CMD ["/start.sh"]
