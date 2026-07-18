@@ -2,7 +2,7 @@ FROM php:8.2-fpm
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    git curl libpng-dev libonig-dev libxml2-dev zip unzip nginx supervisor libzip-dev \
+    git curl libpng-dev libonig-dev libxml2-dev zip unzip nginx supervisor libzip-dev libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
